@@ -1,12 +1,11 @@
 <?php
 header( 'content-type: text/html; charset=utf-8' );
 session_start();
-if (isset($_GET['default'])) 
-{
-$default_audit = 1;
-$jsonhref = "./audits_creation/.default.json";
-        $json = file_get_contents($jsonhref);
-        $json_d = json_decode($json);
+if (isset($_GET['default'])) {
+    $default_audit = 1;
+    $jsonhref = "./audits_creation/.default.json";
+    $json = file_get_contents($jsonhref);
+    $json_d = json_decode($json);
 }
 else {
     $default_audit = 0;
@@ -95,7 +94,7 @@ else {
                             echo 'disabled';
                         };
                         echo '">Ajouter un item</a></td>';
-                        echo '<td class="del-node"><a href="#" class="tree-remove-node">Supprimer un noeud</a></td></tr>';
+                        echo '<td class="del-node"><a href="#" class="tree-remove-node disabled">Supprimer un noeud</a></td></tr>';
                     } elseif ($type == 'item') {
                         echo '<tr class="item treegrid-' . $id . ' treegrid-parent-' . $pere . '">';
                         echo '<td class="noeud">Item ' . $id . '</td>';

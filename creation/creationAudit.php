@@ -2,7 +2,6 @@
 <html lang="fr">
     <?php
         session_start();
-        $_SESSION['name'] = '';
     ?>
 <head>
     <meta charset="UTF-8">

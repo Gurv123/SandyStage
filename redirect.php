@@ -25,7 +25,7 @@ session_start();
         echo"<h2 class='content'>Que souhaitez vous faire à présent ?</h2><br><br><br>";
 	}
 	?>
-        <a href="./creation/creation.php?default"><button class="btn-grad" style="width: 300px;margin: 0.4em 0.2em 0.4em 0.4em;" name="new_audit">Créer un audit</button></a>
+        <a href="./creation/creationAudit.php"><button class="btn-grad" style="width: 300px;margin: 0.4em 0.2em 0.4em 0.4em;" name="new_audit">Créer un audit</button></a>
 <br>    <a href="./search/search.php?audit=modification"><button class="btn-grad" style="width: 300px; margin: 0.4em 0.4em 0.4em 0.2em;" name="import_audit">Modifier un audit</button></a>
 <br>	<a href="./search/search.php?audit=realisation"><button class="btn-grad" style="width: 300px; margin: 0.4em 0.4em 0.4em 0.2em;" name="import_audit">Réaliser un audit</button></a>
 <br>    <a href="./search/search.php?audit=edition"><button class="btn-grad" style="width: 300px; margin: 0.2em 0.2em 0.4em 0.4em;" name="import_audit">Éditer un audit</button></a>
