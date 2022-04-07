@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(../img/grey-abstract-bg.png);
+}
+
+table {
+    font-size: 1em;
+    margin: 0;
+}
+
+.ui-draggable,
+.ui-droppable {
+    background-position: top;
+}
+
+a.btn {
+    margin: 5px;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+}
+
+.btn-grad {
+    background: linear-gradient(to right, rgb(18, 176, 187), rgb(21, 96, 194)) !important;
+    border: hidden;
+    color: white !important;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    width: 180px;
+    height: 35px;
+    font-size: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-grad:hover {
+    background: linear-gradient(to right, rgb(20, 216, 230), rgb(25, 125, 255)) !important;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+::selection {
+    background: rgb(18, 176, 187);
+    color: #fff;
+    text-shadow: none
+}
+
+.logo {
+    width: 50%;
+    height: 200px;
+    margin-top: 100px;
+}

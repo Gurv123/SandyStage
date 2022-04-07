@@ -1,0 +1,9 @@
+[
+  {
+    "id": "0",
+    "type": "node",
+    "init": "Intitule",
+    "has": "has-node",
+    "desc": "Descriptif"
+  }
+]

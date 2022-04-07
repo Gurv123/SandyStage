@@ -1,0 +1,23 @@
+fieldset {
+    border: 0;
+    margin: 1em;
+    height: 6.2em;
+    font-size: 0.7em;
+}
+
+label {
+    font-weight: normal;
+    float: left;
+    margin-right: .5em;
+    font-size: 1em;
+}
+
+select {
+    margin-right: 1em;
+    float: left;
+}
+
+.ui-slider {
+    clear: both;
+    top: 2em;
+}
