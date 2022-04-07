@@ -116,8 +116,8 @@ $(document).on('click', '.tree-add-root', function(e) {
     //console.log('Nombre de noeuds en tout : ' + node_count);
     $('.tree-add').treegrid('add', ['<tr class=\"node treegrid-' + (root_node_count + 1) + ' treegrid-parent-0\">' +
         '<td class="noeud">Noeud ' + (root_node_count + 1) + '</td>' +
-        '<td contenteditable="true">Intitule</td>' +
-        '<td contenteditable="true">Descriptif</td>' +
+        '<td class="intitule" contenteditable="true">Intitule</td>' +
+        '<td class="desc" contenteditable="true">Descriptif</td>' +
         '<td><a href="#" class=\"tree-add-node\">Ajouter un noeud enfant</a></td>' +
         '<td><a href="#" class=\"tree-add-item\">Ajouter un item</a></td>' +
         '<td><a href="#" class=\"tree-remove-node\">Supprimer un noeud</a></td>' +

@@ -5,7 +5,7 @@ $(document).ready(function() {
         var page = path.split("/").pop().slice(0, -4); //On récupère creation ou edition
 
         var childs = $(document).find("tr"); //Liste de l'ensemble des noeuds et item 
-        console.log(childs);
+        //console.log(childs);
         var jsondata = "[";
         for (let c = 0; c < childs.length; c++) { //Chaque éléments
             if ($(childs[c]).hasClass('node') || $(childs[c]).hasClass('item')) {
@@ -39,9 +39,9 @@ $(document).ready(function() {
         jsondata = jsondata.slice(0, -1);
         jsondata = jsondata + "]";
         const jsonToParse = JSON.parse(jsondata);
-        console.log(jsonToParse);
+        //console.log(jsonToParse);
         var json = JSON.stringify(jsonToParse);
-        console.log(json);
+        //console.log(json);
 
         if (confirm("Confirmez-vous l'export de l'audit ?")) {
             $.ajax({
