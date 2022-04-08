@@ -110,12 +110,12 @@ $(document).ready(function() {
 });
 $(document).on('click', '.tree-add-root', function(e) {
     e.preventDefault();
-    var root_node_count = ($('.treegrid-parent-0').length);
+    var root_node_count = ($('.treegrid-parent-0').length + 1);
     var node_count = ($('tr:regex(class,treegrid-\\d+)').length);
-    //console.log('Nombre de noeud sous la racine : ' + root_node_count);
-    //console.log('Nombre de noeuds en tout : ' + node_count);
-    $('.tree-add').treegrid('add', ['<tr class=\"node treegrid-' + (root_node_count + 1) + ' treegrid-parent-0\">' +
-        '<td class="noeud">Noeud ' + (root_node_count + 1) + '</td>' +
+    // console.log('Nombre de noeud sous la racine : ' + root_node_count);
+    // console.log('Nombre de noeuds en tout : ' + node_count);
+    $('.tree-add').treegrid('add', ['<tr class=\"node treegrid-' + (root_node_count) + ' treegrid-parent-0\">' +
+        '<td class="noeud">Noeud ' + (root_node_count) + '</td>' +
         '<td class="intitule" contenteditable="true">Intitule</td>' +
         '<td class="desc" contenteditable="true">Descriptif</td>' +
         '<td><a href="#" class=\"tree-add-node\">Ajouter un noeud enfant</a></td>' +
