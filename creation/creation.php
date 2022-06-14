@@ -39,7 +39,7 @@ else {
 </head>
 
 <body>
-<img src="../img/logo.svg" class="logo" style="margin-left: 25%;" alt="logo"><br><br><br><br>
+<img src="../img/logo.svg" class="logo" alt="logo">
     <table class="table table-bordered tree-add tree-move tree-remove">
         <thead>
             <tr>
@@ -111,15 +111,15 @@ else {
         </tbody>
     </table>
     <?php
-if ($default_audit) {
-    echo '<button id="export_audit" class="btn-grad" style="margin-left: 50px;">Enregistrer l\'audit</button>';
-} else {
-    echo '<button id="export_audit" class="btn-grad" style="margin-left: 50px;">Enregistrer les modifications</button>';
-}
+        if ($default_audit) {
+            echo '<button id="export_audit" class="btn-grad">Enregistrer l\'audit</button>';
+        } else {
+            echo '<button id="export_audit" class="btn-grad" style="width: 300px">Enregistrer les modifications</button>';
+        }
     ?>
-	<br><br>
-        <a href="../index.php"><input type="button" class="btn-grad" value="Retour au menu" style="width: 200px;"></a>
-<br><br>Sandy V0.1
+    
+    <a href="../index.php"><button class="btn-grad">Retour au menu</button></a>
+    <p>Sandy V0.1</p>
 </body>
 <footer>
     <script src="../scripts/jquery-1.12.4.js"></script>

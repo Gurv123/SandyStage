@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>    
-    <img src="../img/logo.svg" class="logo" alt="logo"><br><br>
+    <img src="../img/logo.svg" class="logo" alt="logo">
     <div class="container">
-        <h2 class="content">Téléverser un audit au format .csv ou .xml.</h2><br><br>    
+        <h2 class="content">Téléverser un audit au format .csv ou .xml.</h2>  
 
-    <form enctype="multipart/form-data" class="content" action="saveAudit.php" method="post">
-      <input type="hidden"  class="btn-grad" name="MAX_FILE_SIZE" value="100000" />
-      <div class="content">Chercher un fichier à téléverser <input type="file"  name="monfichier" /></div><br>
-      <input type="submit" class="btn-grad" />
-    </form>
-	<br><br><br>
-        <a href="../index.php"><input type="button" class="btn-grad" value="Retour au menu" style="width: 200px;"></a>
-  </body>
+        <form enctype="multipart/form-data" class="content" action="saveAudit.php" method="post">
+        <input type="hidden"  class="btn-grad" name="MAX_FILE_SIZE" value="100000" />
+        <div class="content">Chercher un fichier à téléverser <input type="file"  name="monfichier" /></div>
+        <input type="submit" class="btn-grad" />
+        </form>
+        <a href="../index.php"><input type="button" class="btn-grad" value="Retour au menu"></a>
+    </div>
+</body>
 </html>

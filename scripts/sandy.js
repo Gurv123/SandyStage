@@ -151,8 +151,8 @@ $(document).on('click', '.tree-add-node', function(e) {
         $(this).closest('tr').addClass('has-node');
         $(this).closest('tr').treegrid('expand');
     } else if (profondeur == 9) {
-        /*console.log("Profondeur égale à 9");
-        console.log($(this).closest('tr'));*/
+        // console.log("Profondeur égale à 9");
+        // console.log($(this).closest('tr'));
         $(this).closest('tr').treegrid('add', ['<tr class="node treegrid-' + id + '">' +
             '<td class="noeud">Noeud ' + id + '</td>' +
             '<td class="intitule" contenteditable="true">Intitule</td>' +

@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>    
-    <img src="../img/logo.svg" class="logo" alt="logo"><br><br>
+    <img src="../img/logo.svg" class="logo" alt="logo">
     <div class="container">
-        <h2 class="content">Vous pouvez créer un audit depuis Sandy ou téléverser un audit.</h2><br><br>       
+        <h2 class="content">Vous pouvez créer un audit depuis Sandy ou téléverser un audit.</h2>
+
         <form action="" method="post" class="content">
             <div class="content">Pour créer un audit depuis Sandy, saisir le nom à donner à votre audit : <input type="text" name="audit_name" id="audit_name"></div>
-            <br>
             <input type="submit" class="btn-grad" value="Valider">
         </form>
-		<br>
+
         <?php
         if(isset($_POST) && !empty($_POST)){
             $search = array('À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'à', 'á', 'â', 'ã', 'ä', 'å', 'ç', 'è', 'é', 'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ð', 'ò', 'ó', 'ô', 'õ', 'ö', 'ù', 'ú', 'û', 'ü', 'ý', 'ÿ');
@@ -36,15 +36,12 @@
             }
         }            
         ?>
-		<div class="content">Téléverser un audit préparé au format .csv ou .xml <a href="./aideImport.php"><input type="button" class="btn-grad" value="Aide import" style="width:120px; height:25px;"></a></div>
-		<br>
-        <a href="../PHP/importAudit.php"><input type="button" class="btn-grad" value="Téléverser un audit" style="width: 300px;"></a>
-		<br><br>
-		<br><br>
-        <a href="../index.php"><input type="button" class="btn-grad" value="Retour au menu" style="width: 200px;"></a>
-		<br><br>
-	</div>
-    
-</body>
 
+		<div class="content">Téléverser un audit préparé au format .csv ou .xml <a href="./aideImport.php"><input type="button" class="btn-grad" value="Aide import" style="width:120px; height:25px;"></a></div>
+        
+        <a href="../PHP/importAudit.php"><input type="button" class="btn-grad" value="Téléverser un audit" style="width: 300px;"></a>
+		
+        <a href="../index.php"><input type="button" class="btn-grad" value="Retour au menu" style="width: 200px;"></a>
+	</div>
+</body>
 </html>

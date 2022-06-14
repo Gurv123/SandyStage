@@ -1,12 +1,16 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background-image: url(../img/grey-abstract-bg.png);
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-table {
-    font-size: 1em;
-    margin: 0;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/grey-abstract-bg.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .ui-draggable,
@@ -24,23 +28,29 @@ a.disabled {
     color: gray;
 }
 
-.btn-grad {
+.btn-grad, .btn-grad-menu {
     background: linear-gradient(to right, rgb(18, 176, 187), rgb(21, 96, 194)) !important;
-    border: hidden;
+    border: none;
     color: white !important;
     text-transform: uppercase;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    width: 180px;
-    height: 35px;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
     font-size: 100%;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.btn-grad:hover {
+.btn-grad:hover, .btn-grad-menu:hover {
     background: linear-gradient(to right, rgb(20, 216, 230), rgb(25, 125, 255)) !important;
     transform: scale(1.1);
     transition: transform 0.3s;
+}
+
+.btn-grad-menu{
+    width: 250px;
+    height: 35px;
 }
 
 ::selection {
@@ -52,5 +62,30 @@ a.disabled {
 .logo {
     width: 50%;
     height: 200px;
-    margin-top: 100px;
+    margin: 5vh 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.content{
+    text-align: center;
+    margin: 10px;
+}
+
+.table{
+    margin: 30px 0;
+}
+
+.doc-table{
+    width: 100%;
+}
+
+ .btn-suppr{
+    text-align: end;
 }

@@ -15,20 +15,22 @@ session_start();
 <body>
     <img src="./img/logo.svg" class="logo" alt="logo"><br><br>
     <div class="container">
-	<?php
-	if(isset($_GET["enregistre"])){
-		if(($_GET["enregistre"])=="ok"){
-			echo "<h2 class='content'>Votre audit a bien été enregistré, que souhaitez vous faire à présent ?</h2><br><br><br>";
-		}
-	}
-	else{
-        echo"<h2 class='content'>Que souhaitez vous faire à présent ?</h2><br><br><br>";
-	}
-	?>
-        <a href="./creation/creationAudit.php"><button class="btn-grad" style="width: 300px;margin: 0.4em 0.2em 0.4em 0.4em;" name="new_audit">Créer un audit</button></a>
-<br>    <a href="./search/search.php?audit=modification"><button class="btn-grad" style="width: 300px; margin: 0.4em 0.4em 0.4em 0.2em;" name="import_audit">Modifier un audit</button></a>
-<br>	<a href="./search/search.php?audit=realisation"><button class="btn-grad" style="width: 300px; margin: 0.4em 0.4em 0.4em 0.2em;" name="import_audit">Réaliser un audit</button></a>
-<br>    <a href="./search/search.php?audit=edition"><button class="btn-grad" style="width: 300px; margin: 0.2em 0.2em 0.4em 0.4em;" name="import_audit">Éditer un audit</button></a>
+        <?php
+        if(isset($_GET["enregistre"])){
+            if(($_GET["enregistre"])=="ok"){
+                echo "<h2 class='content'>Votre audit a bien été enregistré, que souhaitez vous faire à présent ?</h2>";
+            }
+        }
+        else{
+            echo"<h2 class='content'>Que souhaitez vous faire à présent ?</h2>";
+        }
+        ?>
+
+        <a href="./creation/creationAudit.php"><button class="btn-grad" name="new_audit">Créer un audit</button></a>
+        <a href="./search/search.php?audit=modification"><button class="btn-grad" name="import_audit">Modifier un audit</button></a>
+        <a href="./search/search.php?audit=realisation"><button class="btn-grad" name="import_audit">Réaliser un audit</button></a>
+        <a href="./search/search.php?audit=edition"><button class="btn-grad" name="import_audit">Éditer un audit</button></a>
+        <a href="./search/search.php?audit=document"><button class="btn-grad" name="import_docs">Mes Documents</button></a>
     </div>
 </body>
 

@@ -26,7 +26,7 @@ if (isset($_POST['audit'])) {
 </head>
 
 <body>
-    <img src="../img/logo.svg" class="logo" style="margin-left: 25%;" alt="logo"><br><br><br><br>
+    <img src="../img/logo.svg" class="logo"alt="logo">
     <table class="table table-bordered tree-add tree-move tree-remove">
         <thead>
             <tr>
@@ -132,13 +132,11 @@ if (isset($_POST['audit'])) {
             ?>
         </tbody>
     </table>
-    <button id="export_audit" class="btn-grad" style="margin-left: 50px;">Modifier l'audit</button>
-	<br><br>
+    <button id="export_audit" class="btn-grad">Modifier l'audit</button>
 	<form id='$name' action='graphe.php' method='post'>
-		<button type="submit" id="graph_radar" class="btn-grad" style="margin-left: 50px;">Graphique</button>
+		<button type="submit" id="graph_radar" class="btn-grad">Graphique</button>
 		<input type='hidden' name='audit' value='<?php echo $_POST["audit"]; ?>'/>
 	</form>
-	<br><br>
 </body>
 <footer>
     <script src="../scripts/jquery-1.12.4.js"></script>

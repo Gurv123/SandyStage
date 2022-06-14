@@ -95,7 +95,8 @@ echo "keys $key => $value\n";
             ?>
         </tbody>
     </table>
-    <button id="export_audit" class="btn-grad" style="margin-left: 50px;">Enregistrer l'audit</button>
+    <button id="export_audit" class="btn-grad">Enregistrer l'audit</button>
+    <a href="../index.php"><button class="btn-grad">Retour au menu</button></a>
 </body>
 <footer>
     <script src="../scripts/jquery-1.12.4.js"></script>
