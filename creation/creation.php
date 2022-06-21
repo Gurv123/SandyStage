@@ -47,6 +47,7 @@ else {
                 <td class="intitule">Intitule</td>
                 <td class="desc">Descriptif</td>
                 <td class="tools" colspan="3" style="text-align: center;">Outils</td>
+                <td class="doc">Documents</td>
             </tr>
         </thead>
         <tbody>
@@ -67,6 +68,8 @@ else {
                 </td>
             </tr>
             <?php
+            $path="../document/audit_doc/";
+
             foreach ($json_d as $key => $jsons) { // This will search in the 2 jsons
                 if ($key > 0) {
                     $type = $json_d[$key]->type;
@@ -79,6 +82,7 @@ else {
                     $init = $json_d[$key]->init;
                     $desc = $json_d[$key]->desc;
                     $has = $json_d[$key]->has;
+                    $doc = $json_d[$key]->doc;
                     if ($type == 'node') {
                         echo '<tr class="node treegrid-' . $id . ' ' . $has . ' treegrid-parent-' . $pere . ' expanded" >';
                         echo '<td class="noeud">Noeud ' . $id . '</td>';
@@ -94,7 +98,8 @@ else {
                             echo 'disabled';
                         };
                         echo '">Ajouter un item</a></td>';
-                        echo '<td class="del-node"><a href="#" class="tree-remove-node disabled">Supprimer un noeud</a></td></tr>';
+                        echo '<td class="del-node"><a href="#" class="tree-remove-node disabled">Supprimer un noeud</a></td>';
+                        echo '<td><a class="path" href="../document/audit_doc/'.$doc.'" target="_blank">'.$doc.'</a></td></tr>';
                     } elseif ($type == 'item') {
                         echo '<tr class="item treegrid-' . $id . ' treegrid-parent-' . $pere . '">';
                         echo '<td class="noeud">Item ' . $id . '</td>';

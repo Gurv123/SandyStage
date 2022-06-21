@@ -169,7 +169,7 @@
 												</td>
 											</tr>
 											<input type='hidden' name='audit' value='$name'/>
-								</form> </tbody> </table> </div>");
+								</form>");
 							}
 						}
 					}
@@ -177,7 +177,9 @@
 					echo "</tbody> </table> </div> <p class='missing'>Aucun audit trouvé.</p>";
 				}
 				?>
-	
+			</tbody>
+		</table>
+	</div>
 	<a href="../index.php"><input type="button" class="btn-grad" value="Retour au menu" style="width: 200px;"></a>
 </body>
 </html>

@@ -32,7 +32,8 @@ if (isset($_POST['audit'])) {
             <tr>
                 <td class="app">Sandy V0.1 <?php echo "- ".$_POST['audit']; ?></td>
                 <td class="desc">Descriptif</td>
-                <td class="tools" style="text-align: center;">Note</td>
+                <td class="tools" width="35%" style="text-align: center;">Note</td>
+                <td class="doc">Documents</td>
             </tr>
         </thead>
         <tbody>
@@ -58,11 +59,13 @@ if (isset($_POST['audit'])) {
                     $desc = $json_d[$key]->desc;
                     $has = $json_d[$key]->has;
 					$note = $json_d[$key]->note;
+                    $doc = $json_d[$key]->doc;
                     if ($type == 'node') {
                         echo '<tr style="background-color:lightgray;"class="node treegrid-' . $id . ' ' . $has . ' treegrid-parent-' . $pere . ' expanded" >';
                         echo '<td class="noeud"> ' . $init . '</td>';
                         echo '<td class="desc"">' . $desc . '</td>';
                         echo '<td class="note">' . $note . '</td>';
+                        echo '<td><a class="path" href="../document/audit_doc/'.$doc.'" target="_blank">'.$doc.'</a></td></tr>';
                     } elseif ($type == 'item') {
                         echo '<tr class="item treegrid-' . $id . ' treegrid-parent-' . $pere . '">';
                         echo '<td class="noeud" style="padding-top:42.5px;"> ' . $init . '</td>';

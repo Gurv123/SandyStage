@@ -6,6 +6,9 @@ $(document).ready(function() {
 
         var childs = $(document).find("tr"); //Liste de l'ensemble des noeuds et item 
         //console.log(childs);
+
+        var nbr = 0;
+
         var jsondata = "[";
         for (let c = 0; c < childs.length; c++) { //Chaque éléments
             if ($(childs[c]).hasClass('node') || $(childs[c]).hasClass('item')) {
@@ -24,14 +27,40 @@ $(document).ready(function() {
                 if ($(childs[c]).hasClass('node')) {
                     var type = 'node';
 					var note = null;
+
+                    if ($(childs[c]).hasClass('node') && !($(childs[c]).hasClass('treegrid-0')) && nbr < document.getElementsByClassName('path').length) {
+                        if (document.getElementsByClassName('path')[nbr].innerText != '') {
+                            var docPath = document.getElementsByClassName('path')[nbr].innerText;
+                        } else {
+                            var docPath = document.getElementsByClassName('path')[nbr].value;
+                        }
+                        
+                        console.log(document.getElementsByClassName('path'));
+                        console.log(docPath);
+                        console.log(nbr);
+
+                        if(docPath.match(/^.*[\\\/]/, '')){
+                            var doc = docPath.replace(/^.*[\\\/]/, '');
+                            console.log(doc);
+                        }else{
+                            var doc = docPath;
+                            console.log(doc);
+                        }
+                                   
+                        nbr += 1;
+                    } else{
+                        doc = null;
+                    }
                 } else {
                     var type = 'item';
-					var note = $(childs[c]).find('.ui-slider-handle').attr("aria-valuenow");
+					var note = $(childs[c]).find('.ui-slider-handle').attr("monFichier");
                 }
                 var intitule = $(childs[c]).find('.intitule').text();
                 var desc = $(childs[c]).find('.desc').text();
+                
+                
 
-                var obj = '{"id": "' + id + '", "type": "' + type + '","init": "' + intitule + '","has": "' + has + '","desc": "' + desc + '","note": "' + note + '"}';
+                var obj = '{"id": "' + id + '", "type": "' + type + '", "init": "' + intitule + '", "has": "' + has + '", "desc": "' + desc + '", "note": "' + note + '", "doc": "' + doc +'"}';
                 jsondata = jsondata + obj + ',';
             }
         }

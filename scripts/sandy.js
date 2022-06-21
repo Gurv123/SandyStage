@@ -121,6 +121,7 @@ $(document).on('click', '.tree-add-root', function(e) {
         '<td><a href="#" class=\"tree-add-node\">Ajouter un noeud enfant</a></td>' +
         '<td><a href="#" class=\"tree-add-item\">Ajouter un item</a></td>' +
         '<td><a href="#" class=\"tree-remove-node\">Supprimer un noeud</a></td>' +
+        '<td><input type="file" class="path" /></td>' +
         '</tr>'
     ]);
     arty(0, "");
@@ -145,6 +146,7 @@ $(document).on('click', '.tree-add-node', function(e) {
             '<td class="add-node"><a href="#" class="tree-add-node">Ajouter un noeud enfant</a></td>' +
             '<td class="add-item"><a href="#" class="tree-add-item">Ajouter un item</a></td>' +
             '<td class="del-node"><a href="#" class="tree-remove-node">Supprimer un noeud</a></td>' +
+            '<td><input type="file" class="path" /></td>' +
             '</tr>'
         ]);
         $(this).closest('tr').find(".tree-add-item").addClass('disabled');

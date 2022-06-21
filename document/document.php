@@ -78,7 +78,7 @@
     <?php 
     // Opens directory
     $myDirectory=opendir("./audit_doc/");
-    $path=	"./audit_doc/";
+    $path="./audit_doc/";
 
     if(glob($path."*")){
       echo ("<table class=\"sortable\">

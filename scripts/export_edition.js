@@ -6,9 +6,14 @@ $(document).ready(function() {
 		if(page=="realisation"){
 			page="edition";
 		}
+
         var childs = $(document).find("tr"); //Liste de l'ensemble des noeuds et item 
         console.log(childs);
+
         var jsondata = "[";
+
+        var nbr = 0;
+
         for (let c = 0; c < childs.length; c++) { //Chaque éléments
             if ($(childs[c]).hasClass('node') || $(childs[c]).hasClass('item')) {
                 var classList = $(childs[c]).attr('class').split(/\s+/); //Récupération de la liste des classes d'un élément
@@ -26,6 +31,30 @@ $(document).ready(function() {
                 if ($(childs[c]).hasClass('node')) {
                     var type = 'node';
                     var note = null;
+
+                    if ($(childs[c]).hasClass('node') && !($(childs[c]).hasClass('treegrid-0')) && nbr < document.getElementsByClassName('path').length) {
+                        if (document.getElementsByClassName('path')[nbr].innerText != '') {
+                            var docPath = document.getElementsByClassName('path')[nbr].innerText;
+                        } else {
+                            var docPath = document.getElementsByClassName('path')[nbr].value;
+                        }
+                        
+                        console.log(document.getElementsByClassName('path'));
+                        console.log(docPath);
+                        console.log(nbr);
+
+                        if(docPath.match(/^.*[\\\/]/, '')){
+                            var doc = docPath.replace(/^.*[\\\/]/, '');
+                            console.log(doc);
+                        }else{
+                            var doc = docPath;
+                            console.log(doc);
+                        }
+                                   
+                        nbr += 1;
+                    } else{
+                        doc = null;
+                    }
                 } else {
                     var type = 'item';
                     var note = $(childs[c]).find('.ui-slider-handle').attr("aria-valuenow");
@@ -34,7 +63,7 @@ $(document).ready(function() {
                 var intitule = $(childs[c]).find('.noeud').text();
                 var desc = $(childs[c]).find('.desc').text();
 
-                var obj = '{"id": "' + id + '", "type": "' + type + '","init": "' + intitule + '","has": "' + has + '","desc": "' + desc + '","note": "' + note + '"}';
+                var obj = '{"id": "' + id + '", "type": "' + type + '","init": "' + intitule + '","has": "' + has + '","desc": "' + desc + '","note": "' + note + '", "doc": "' + doc +'"}';
                 jsondata = jsondata + obj + ',';
             }
         }
