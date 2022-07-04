@@ -65,7 +65,7 @@
   <h2 class="content">Téléverser vos documents au format .pdf.</h2>  
 
   <form enctype="multipart/form-data" class="content" action="document.php" method="post">
-    <input type="hidden"  class="btn-grad" name="MAX_FILE_SIZE" value="500000" />
+    <input type="hidden"  class="btn-grad" name="MAX_FILE_SIZE" value="5000000" />
 
     <div class="content">Chercher un/des fichier à téléverser <input type="file" id="fichier" name="mesfichier[]" multiple/></div>
 
